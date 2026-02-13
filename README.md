@@ -27,7 +27,7 @@ A simple command-line TicTacToe game for two players implemented in Python.
 3. Enter the row and column numbers (0-2) separated by a space when prompted.
    - Example: `0 1` places your mark in row 0, column 1
 
-4. The board positions are:
+4. The board uses a coordinate system with rows and columns numbered 0-2:
    ```
      0   1   2
    0   |   |  

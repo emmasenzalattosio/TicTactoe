@@ -133,20 +133,24 @@ class TicTacToe:
 
 def main():
     """Main entry point for the game."""
-    game = TicTacToe()
-    game.play()
-    
-    # Ask to play again
-    while True:
-        play_again = input("\nWould you like to play again? (y/n): ").strip().lower()
-        if play_again == 'y':
-            game = TicTacToe()
-            game.play()
-        elif play_again == 'n':
-            print("Thanks for playing TicTacToe!")
-            break
-        else:
-            print("Please enter 'y' or 'n'.")
+    try:
+        game = TicTacToe()
+        game.play()
+        
+        # Ask to play again
+        while True:
+            play_again = input("\nWould you like to play again? (y/n): ").strip().lower()
+            if play_again == 'y':
+                game = TicTacToe()
+                game.play()
+            elif play_again == 'n':
+                print("Thanks for playing TicTacToe!")
+                break
+            else:
+                print("Please enter 'y' or 'n'.")
+    except KeyboardInterrupt:
+        print("\n\nThanks for playing TicTacToe!")
+        return
 
 
 if __name__ == "__main__":
