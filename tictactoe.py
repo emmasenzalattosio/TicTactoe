@@ -92,24 +92,14 @@ while not game_over:
     
     # Check for draw
     if not game_over:
-        is_draw = True
-        for i in range(3):
-            for j in range(3):
-                if board[i][j] == ' ':
-                    is_draw = False
-                    break
-            if not is_draw:
-                break
+        is_draw = all(board[i][j] != ' ' for i in range(3) for j in range(3))
         
         if is_draw:
             game_over = True
     
     # Switch player
     if not game_over:
-        if current_player == 'X':
-            current_player = 'O'
-        else:
-            current_player = 'X'
+        current_player = 'O' if current_player == 'X' else 'X'
 
 # Display final board
 print("\nFinal board:")
